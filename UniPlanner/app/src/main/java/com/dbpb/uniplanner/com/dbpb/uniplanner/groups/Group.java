@@ -1,17 +1,18 @@
 package com.dbpb.uniplanner.com.dbpb.uniplanner.groups;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Group{
 
-    private static LinkedList<User> group = new LinkedList<>();
+    private LinkedList<User> group = new LinkedList<>();
     private String groupName;
 
     public Group(String groupName){
         this.groupName = groupName;
     }
 
-    public static LinkedList<User> getGroup(){
+    public LinkedList<User> getGroup(){
         return group;
     }
 
@@ -28,7 +29,12 @@ public class Group{
     }
 
     public String getGroupName(){
+
         return groupName;
+    }
+
+    public void changeGroupName(String groupName){
+        this.groupName = groupName;
     }
 
 }

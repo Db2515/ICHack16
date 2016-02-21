@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dbpb.uniplanner.com.dbpb.uniplanner.groups.RemoveUserActivity"
+    tools:showIn="@layout/activity_remove_user">
+
+    <EditText
+        android:id="@+id/add_user_submit"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:hint="Enter a username"
+        ></EditText>
+
+    <Button
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="Submit"
+        android:onClick="submitRemoveUser"/>
+
+</LinearLayout>

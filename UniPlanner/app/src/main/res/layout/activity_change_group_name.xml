@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.dbpb.uniplanner.com.dbpb.uniplanner.groups.GroupManager">
+    tools:context=".com.dbpb.uniplanner.groups.ChangeGroupNameActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_group_manager" />
+    <include layout="@layout/content_change_group_name" />
+
 
 </android.support.design.widget.CoordinatorLayout>

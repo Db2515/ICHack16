@@ -13,12 +13,10 @@
     tools:context="com.dbpb.uniplanner.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <ListView
-        android:id="@+id/recent_list"
+    <CalendarView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="70"
-        ></ListView>
+        android:layout_weight="90"></CalendarView>
 
     <HorizontalScrollView
         android:layout_width="match_parent"

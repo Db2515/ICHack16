@@ -21,6 +21,18 @@
         <activity
             android:name=".com.dbpb.uniplanner.groups.GroupManager"
             android:label="@string/title_activity_group_manager"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".com.dbpb.uniplanner.groups.AddUserActivity"
+            android:label="@string/title_activity_add_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".com.dbpb.uniplanner.groups.RemoveUserActivity"
+            android:label="@string/title_activity_remove_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".com.dbpb.uniplanner.groups.ChangeGroupNameActivity"
+            android:label="@string/title_activity_change_group_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

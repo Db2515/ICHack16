@@ -35,14 +35,21 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add User"/>
+            android:text="Add User"
+            android:onClick="addUser"
+            android:layout_gravity="center"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remove User"/>
+            android:text="Remove User"
+            android:onClick="removeUser"
+            android:layout_gravity="center"/>
+        <!--
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change group name"/>
+            android:text="Change group name"
+            android:onClick="changeGroupName"/>
+        -->
     </LinearLayout>
 </LinearLayout>

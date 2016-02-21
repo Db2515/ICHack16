@@ -1,37 +1,20 @@
 package com.dbpb.uniplanner;
 
-import android.appwidget.AppWidgetManager;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.Group;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.GroupManager;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.User;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.userInGroupException;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         LinearLayout groupList = (LinearLayout) findViewById(R.id.group_list);
+        groupList.removeAllViews();
         for(Group group: groups){
             Button button = new Button(getApplicationContext());
             button.setText(group.getGroupName());

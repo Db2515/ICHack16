@@ -1,5 +1,7 @@
 package com.dbpb.uniplanner.com.dbpb.uniplanner.groups;
 
+import java.util.Objects;
+
 public class User {
 
     private String username;
@@ -19,6 +21,12 @@ public class User {
     }
 
     public String getProfilePictureAddress(){
+
         return profilePictureAddress;
+    }
+
+    @Override
+    public boolean equals(Object object){
+        return object instanceof User && this.username.equals(((User) object).getUsername());
     }
 }
