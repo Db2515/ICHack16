@@ -5,4 +5,6 @@
     <string name="title_activity_add_user">AddUserActivity</string>
     <string name="title_activity_remove_user">RemoveUserActivity</string>
     <string name="title_activity_change_group_name">ChangeGroupName</string>
+    <string name="title_activity_add_group">AddGroupActivity</string>
+    <string name="title_activity_remove_group">RemoveGroupActivity</string>
 </resources>

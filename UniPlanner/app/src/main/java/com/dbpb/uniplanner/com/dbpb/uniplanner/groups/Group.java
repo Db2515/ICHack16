@@ -1,6 +1,5 @@
 package com.dbpb.uniplanner.com.dbpb.uniplanner.groups;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Group{
@@ -34,7 +33,14 @@ public class Group{
     }
 
     public void changeGroupName(String groupName){
+
         this.groupName = groupName;
+    }
+
+    @Override
+    public boolean equals(Object object){
+        return object instanceof Group
+                && ((Group) object).getGroupName().equals(this.getGroupName());
     }
 
 }

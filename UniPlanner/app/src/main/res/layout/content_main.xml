@@ -16,7 +16,7 @@
     <CalendarView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="90"></CalendarView>
+        android:layout_weight="80"></CalendarView>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -30,6 +30,23 @@
             >
         </LinearLayout>
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="9"
+        android:layout_gravity="right">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" + "
+            android:onClick="addGroup"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" - "
+            android:onClick="removeGroup"/>
+    </LinearLayout>
 
 
 </LinearLayout>

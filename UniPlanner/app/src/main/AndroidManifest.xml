@@ -33,6 +33,14 @@
         <activity
             android:name=".com.dbpb.uniplanner.groups.ChangeGroupNameActivity"
             android:label="@string/title_activity_change_group_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".com.dbpb.uniplanner.groups.AddGroupActivity"
+            android:label="@string/title_activity_add_group"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".com.dbpb.uniplanner.groups.RemoveGroupActivity"
+            android:label="@string/title_activity_remove_group"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

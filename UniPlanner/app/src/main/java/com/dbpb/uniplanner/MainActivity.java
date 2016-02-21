@@ -10,8 +10,10 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.AddGroupActivity;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.Group;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.GroupManager;
+import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.RemoveGroupActivity;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.User;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.userInGroupException;
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             button.setOnClickListener(clickListener);
             groupList.addView(button);
         }
+
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -88,5 +91,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void addGroup(View view){
+        Intent intent = new Intent(this, AddGroupActivity.class);
+        startActivity(intent);
+    }
+
+    public void removeGroup(View view){
+        Intent intent = new Intent(this, RemoveGroupActivity.class);
+        startActivity(intent);
     }
 }

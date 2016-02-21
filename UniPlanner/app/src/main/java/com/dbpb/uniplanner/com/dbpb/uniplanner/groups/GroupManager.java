@@ -18,7 +18,7 @@ public class GroupManager extends AppCompatActivity {
 
     private Group group = new Group("");
     private static String groupName;
-    private LinkedList<Group> groups;
+    private static LinkedList<Group> groups = new LinkedList<>();
     public static final String EXTRA_MESSAGE = "com.dbpb.uniplanner.groups.GroupManager.MESSAGE";
 
     @Override
@@ -67,6 +67,16 @@ public class GroupManager extends AppCompatActivity {
         Intent intent = new Intent(this, RemoveUserActivity.class);
         intent.putExtra(EXTRA_MESSAGE, groupName);
         startActivity(intent);
+    }
+
+    public static void addGroup(String name){
+        Group group = new Group(name);
+        groups.add(group);
+    }
+
+    public static void removeGroup(String name){
+        Group group = new Group(name);
+        groups.remove(group);
     }
 
     /*
