@@ -4,14 +4,14 @@ import java.util.LinkedList;
 
 public class Group{
 
-    private LinkedList<User> group;
+    private static LinkedList<User> group = new LinkedList<>();
     private String groupName;
 
     public Group(String groupName){
         this.groupName = groupName;
     }
 
-    public LinkedList<User> getGroup(){
+    public static LinkedList<User> getGroup(){
         return group;
     }
 
