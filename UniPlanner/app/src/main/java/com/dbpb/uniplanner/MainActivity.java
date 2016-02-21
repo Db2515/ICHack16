@@ -2,6 +2,8 @@ package com.dbpb.uniplanner;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -23,6 +25,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.Group;
+import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.GroupManager;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.User;
 import com.dbpb.uniplanner.com.dbpb.uniplanner.groups.userInGroupException;
 
@@ -33,7 +36,8 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LinkedList<Group> groups = new LinkedList<>();
+    public final static String EXTRA_MESSAGE = "com.dbpb.uniplanner.MESSAGE";
+    private static LinkedList<Group> groups = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,27 +64,26 @@ public class MainActivity extends AppCompatActivity {
         for(Group group: groups){
             Button button = new Button(getApplicationContext());
             button.setText(group.getGroupName());
+            button.setOnClickListener(clickListener);
             groupList.addView(button);
         }
     }
 
-
-    /*
-    private Bitmap getBitmapFromURL(String src){
-        try {
-            URL url = new URL(src);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.connect();
-            InputStream input = connection.getInputStream();
-            Bitmap pp = BitmapFactory.decodeStream(input);
-            return pp;
-        } catch (Exception e){
-            e.printStackTrace();
-            return null;
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), GroupManager.class);
+            Button b = (Button) v;
+            String groupname = b.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE, groupname);
+            startActivity(intent);
         }
+    };
+
+    public static LinkedList<Group> getGroups(){
+        return groups;
     }
-*/
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
